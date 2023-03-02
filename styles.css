@@ -1,0 +1,387 @@
+/* *********************** */
+/*         RESETS          */
+/* *********************** */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+  text-rendering: optimizeSpeed;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  max-width: 100%;
+  block-size: auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  border: none;
+  background-color: transparent;
+}
+
+a,
+button {
+  cursor: pointer;
+}
+
+.visually-hidden {
+  border: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  -webkit-clip-path: inset(50%) !important;
+  clip-path: inset(50%) !important;
+  height: 1px !important;
+  overflow: hidden !important;
+  margin: -1px !important;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important;
+  white-space: nowrap !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+:root {
+/* Primary */
+
+--Soft-orange: hsl(35, 77%, 62%);
+--Soft-red: hsl(5, 85%, 63%);
+
+/* Neutral */
+
+--Off-white: hsl(36, 100%, 99%);
+--Grayish-blue: hsl(233, 8%, 79%);
+--Dark-grayish-blue: hsl(236, 13%, 42%);
+--Very-dark-blue: hsl(240, 100%, 5%);
+}
+
+body {
+    background-color: var(--Off-white);
+    padding: 5.5rem 1rem 2rem 1rem;
+    font-family: "inter";
+    font-size: 15px;
+    
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 1.75rem 1rem 2rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--Off-white);
+}
+
+header ul {
+  display: none;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  right: -16rem;
+  bottom: 0;
+  background-color: var(--Off-white);
+  width: 16rem;
+  transition: 0.2s;
+}
+
+.sidebar ul {
+  position: absolute;
+  top: 9.25rem;
+  left: 1.5rem;
+}
+
+.sidebar ul li {
+  margin-bottom: 1.5rem;
+}
+
+.active {
+  right: 0;
+}
+
+ul {
+  color: var(--Very-dark-blue);
+  font-size: 1rem;
+}
+
+ul li a {
+  transition: 0.2s;
+}
+
+ul li a:hover {
+  color: var(--Soft-red);
+}
+
+.menu-close-btn {
+  position: absolute;
+  top: 1.625rem;
+  right: 1.25rem;
+  display: flex;
+}
+
+.logo {
+    height: 1.75rem;
+    display: flex;
+}
+
+header button {
+    display: flex;
+    height: 17px;
+}
+
+.hero-desktop {
+  display: none;
+}
+
+.main-heading {
+    font-weight: 900;
+    font-size: 2.5rem;
+    line-height: 1;
+    margin: 1rem 0;
+    color: var(--Very-dark-blue);
+}
+
+.main-paragraph {
+    color: var(--Dark-grayish-blue);
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+.readmore-link {
+    display: inline-block;
+    color: white;
+    background-color: var(--Soft-red);
+    font-size: 0.84rem;
+    letter-spacing: 0.25rem;
+    font-weight: 700;
+    padding: 0.875rem 2.4rem;
+    transition: 0.2s;
+}
+
+.readmore-link:hover {
+    background-color: var(--Very-dark-blue);
+}
+
+.new {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--Very-dark-blue);
+    padding: 1.375rem;
+    margin: 4rem 0;
+}
+
+.new h2 {
+    color: var(--Soft-orange);
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.new div {
+    border-bottom: var(--Dark-grayish-blue) solid 1px;
+    margin-bottom: 2rem;
+}
+
+.new div a {
+    color: white;
+    transition: 0.2s;
+}
+
+.new div a:hover {
+    color: var(--Soft-orange);
+}
+
+.new div h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.new div p {
+    color: var(--Grayish-blue);
+    margin-bottom: 2rem;
+}
+
+.others {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 28.125rem;
+}
+
+.container {
+   display: flex;
+}
+
+.others img {
+    width: 6.25rem;
+    height: 8.125rem;
+}
+
+.text-content {
+    display: flex;
+    flex-direction: column;
+    padding-left: 1.5rem;
+}
+
+.text-content span {
+    font-size: 2rem;
+    color: var(--Grayish-blue);
+    font-weight: 700;
+}
+
+.text-content h3 {
+    font-size: 1.125rem;
+    font-weight: 800;
+}
+
+.text-content a {
+    color: var(--Very-dark-blue);
+    transition: 0.2s;
+}
+
+.text-content a:hover {
+    color: var(--Soft-red);
+}
+
+.text-content p {
+    color: var(--Dark-grayish-blue);
+    line-height: 1.8;
+}
+
+@media (min-width: 680px) {
+    body {
+      display: flex;
+      justify-content: center;
+      padding-top: 11.375rem;
+    }
+    main {
+      max-width: 69.375rem;
+    }
+    .hero-desktop {
+      display: inline-block;
+    }
+    .hero-mobile {
+      display: none;
+    }
+    .topsection-discription {
+      display: flex;
+      margin-top: 1.5rem; 
+    }
+    .topsection-discription h1 {
+      flex: 1;
+      font-size: 3.5rem;
+      margin: 0;
+    }
+    .topsection-discription div {
+      flex: 1;
+      margin-left: 1.5rem;
+    }
+    .main-paragraph {
+      margin-bottom: 2rem;
+    }
+    .new h2 {
+      font-size: 2.5rem;
+    }
+    header {
+      max-width: 1142px;
+      margin: auto;
+      padding: 5.5rem 1rem 3.375rem 1rem;
+    }
+    .menu-btn {
+      display: none;
+    }
+    .logo {
+      height: 2.5rem;
+    }
+    header ul {
+      display: flex;
+      width: 27.25rem;
+      justify-content: space-between;
+      color: var(--Dark-grayish-blue);
+    }
+    header ul li {
+      display: flex;
+    }
+}
+
+@media (min-width: 1130px) {
+  .others {
+    flex-direction: row;
+    height: auto;
+  }
+  .container  {
+    max-width: 22rem;
+  }
+  .top-and-middle-section {
+    display: flex;
+    margin-bottom: 4rem;
+  }
+  .new {
+    max-width: 21.875rem;
+    height: auto;
+    margin: 0;
+    margin-left: 2.5rem;
+  }
+  .top-section {
+    display: inline-block;
+    max-width: 730px;
+  }
+  header {
+    padding: 5.5rem 1rem 3.375rem 1rem;
+  }
+}
